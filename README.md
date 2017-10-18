@@ -28,7 +28,7 @@ Vamos a escribir un plugin que agarra el texto seleccionado y lo abre como direc
 - construir selección
   + si están seleccionados uno o más caracteres, ellos se toman como la selección
   + si no está seleccionado ningún caracter, se expande la selección hasta llegar a caracteres __delimeter__: estos se pueden especificar por el usuario
-- construir una ruta absolute al directorio/archivo si la ruta no es absoluta
+- construir una ruta absoluta al directorio/archivo si la ruta no es absoluta
   + si la selección viene de un view que corresponde a un archivo, construye la ruta con el directorio del archivo como base
   + de lo contrario, checa si el window tiene un project, y toma el directorio del project como base
 - abre el URL con el web browser si no correponse ni a un archivo ni a un directorio

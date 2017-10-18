@@ -70,10 +70,26 @@ Para estar seguro que se instaló bien, reinicia Sublime Text (ciérrala y ábre
   + Exportar a cURL, HTTPie
   + Importar de cURL
     * Debugging peticiones AJAX/XHR mandados por tu browser
+    * <https://www.nytimes.com/>, `commentData.json`, `commentCount`
 - Autenticación: Twitter API
   + Extensiones a Requester, `requests-oauthlib`
+  + <https://developer.twitter.com/en/docs/api-reference-index>
   + Explorando hyperlinked APIs (HATEOAS)
 - Bonus: GraphQL support
+
+~~~py
+###env
+from requests_oauthlib import OAuth1
+auth = OAuth1(API_KEY, API_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
+###env
+
+get('https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=stackoverflow&count=1000', auth=auth)
+~~~
+
+~~~py
+requests.get('https://api.graphloc.com/graphql')
+# curl ipinfo.io/ip
+~~~
 
 
 ## Preguntas
